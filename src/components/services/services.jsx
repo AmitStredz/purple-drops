@@ -12,9 +12,7 @@ export default function Services() {
       <Page1 />
       {/* <Page2 /> */}
       {/* <Page3 /> */}
-      <div className="px-10">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }
