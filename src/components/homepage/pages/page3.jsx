@@ -3,6 +3,9 @@ import React from "react";
 import avatar from "../../../assets/avatar.png";
 import { Rating } from "@mui/material";
 
+import textImg from "../../../assets/textImg.png";
+import Marquee from "react-fast-marquee";
+
 export default function Page3() {
   const clients = [
     {
@@ -73,16 +76,16 @@ export default function Page3() {
       </div>
 
       <div className="flex items-center justify-center w-full">
-        <span className="text-[122px] text-center font-bold">
+        {/* <span className="text-[122px] text-center font-bold">
           We're looking for new challenge
-        </span>
+        </span> */}
+        <img src={textImg} className="p-10"></img>
       </div>
-      <div className="flex gap-3 -mx-[60px] p-10 px-14 text-[40px] bg-gradient-to-b from-[#563B63] to-[#6D3C86] overflow-hidden">
-        <span className="w-full">
-          LET'S WORK TOGETHER . LET'S WORK TOGETHER{" "}
-        </span>
-        {/* <span className="w-full">LET'S WORK TOGETHER</span>
-        <span className="w-full">LET'S WORK TOGETHER</span> */}
+      <div className="flex p-6 -mx-10 px-14 bg-gradient-to-b from-[#563B63] to-[#6D3C86] overflow-hidden">
+        <Marquee speed={120} gradient={false} >
+          <span className="text-[60px] font- ">LET'S WORK TOGETHER • &nbsp;</span>
+          <span className="text-[60px] font- ">LET'S WORK TOGETHER • &nbsp;</span>
+        </Marquee>
       </div>
     </div>
   );

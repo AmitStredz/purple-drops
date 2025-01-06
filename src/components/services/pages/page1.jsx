@@ -1,5 +1,9 @@
 import React from "react";
 
+import textImg from "../../../assets/textImg.png";
+
+import Marquee from "react-fast-marquee";
+
 export default function Page1() {
   const solutions = [
     {
@@ -86,12 +90,10 @@ export default function Page1() {
           growth and better working conditions.
         </span>
       </div>
-
       <div className="flex flex-col text-[62px] px-10 italic z-50">
         <span className=" z-50">OUR</span>
         <span className=" z-50">SOLUTIONS</span>
       </div>
-
       <div className=" z-50">
         {solutions.map((item, index) => (
           <div>
@@ -117,20 +119,25 @@ export default function Page1() {
           </div>
         ))}
       </div>
-
       <div className="flex items-center justify-center w-full p-20">
-        <span className="text-[122px] text-center font-bold">
+        {/* <span className="text-[122px] text-center font-bold">
           We're looking for new challenge
-        </span>
+        </span> */}
+        <img src={textImg} className="p-10"></img>
       </div>
-      <div className="flex gap-3 p-10 px-14 text-[40px] bg-gradient-to-b from-[#563B63] to-[#6D3C86] overflow-hidden">
-        <span className="w-full">
-          LET'S WORK TOGETHER . LET'S WORK TOGETHER{" "}
-        </span>
-        {/* <span className="w-full">LET'S WORK TOGETHER</span>
-        <span className="w-full">LET'S WORK TOGETHER</span> */}
-      </div>
+      {/* <div style={{ height: "500px" }} className="flex">
+        <Marquee speed={120} gradient={false}>
+          <span className="text-4xl font-bold px-10">
+            LET'S WORK TOGETHER . LET'S WORK TOGETHER{" "}
+          </span>
+        </Marquee>
+      </div> */}
 
+      <div className="flex p-6 px-14 bg-gradient-to-b from-[#563B63] to-[#6D3C86] overflow-hidden">
+        <Marquee speed={120} gradient={false}>
+          <span className="text-[60px] font- px-10">LET'S WORK TOGETHER .</span>
+        </Marquee>
+      </div>
       <img
         src="/purpleEllipse2.png"
         className="absolute w- -top-[5%] -right-[10%] blur-[100px] opacity-60"
