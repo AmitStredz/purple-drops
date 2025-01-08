@@ -14,9 +14,9 @@ export default function Page2() {
         "Revolutionize your business with blockchain powered decentralized ecosystems, leveraging smart contracts for unmatched transparency, efficiency, and trust.",
       labels: [
         "Crypto Games",
+        "Token development",
         "Smart contract developement",
         "ICO (solana and Ethereum)",
-        "Token development",
         "DAPP",
       ],
       img: "img1",
@@ -42,9 +42,9 @@ export default function Page2() {
         "Financial Management",
         "Supply Chain Management",
         "HR Management",
+        "CRM",
         "Project Management",
         "Production Manufacturing",
-        "CRM",
       ],
       img: "img3",
     },
@@ -57,22 +57,22 @@ export default function Page2() {
     },
   ];
   return (
-    <div className="relative flex flex-col gap-10 p-10 z-50 overflow-hidden">
+    <div className="relative flex flex-col gap-10 p-3 sm:p-10 z-50 overflow-hidden">
       <div className="header flex justify-between z-50">
         <div className="flex flex-col font-[300]">
-          <span className="text-[20px]">SERVICES</span>
-          <span className="text-[62px]">WHAT WE ARE</span>
-          <span className="text-[62px]">OFFERING</span>
+          <span className="text-[12px] sm:text-[20px]">SERVICES</span>
+          <span className="text-[22px] sm:text-[30px] md:text-[62px]">WHAT WE ARE</span>
+          <span className="text-[22px] sm:text-[30px] md:text-[62px]">OFFERING</span>
         </div>
         <div>
-          <button className="p-7 px-10 rounded-full border text-[20px] hover:bg-white hover:bg-opacity-20 transition-all">
+          <button className="p-3 sm:p-7 md:px-10 rounded-full border text-[12px] sm:ext-[16px] md:text-[20px] hover:bg-white hover:bg-opacity-20 transition-all">
             EXPLORE ALL
           </button>
         </div>
       </div>
 
       {/* Content */}
-      <div className="grid grid-cols-2 gap-5 w-full z-50">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full z-50">
         {data.map((info, index) => (
           <div
             key={index}
@@ -80,11 +80,11 @@ export default function Page2() {
           >
             <div className="header flex justify-between w-full">
               <div className="flex flex-col gap-2 w-full">
-                <span className="text-[30px] font-semibold">{info.title}</span>
-                <div className="w-full flex flex-wrap gap-3">
+                <span className="text-[20px] sm:text-[30px] font-semibold">{info.title}</span>
+                <div className="w-full flex flex-wrap gap-2 sm:gap-3">
                   {info.labels.map((label, index) => (
                     <span
-                      className="p-2 px-3 border rounded-full text-[11px] hover:bg-white hover:bg-opacity-25 cursor-pointer transition-all"
+                      className="p-1 sm:p-2 px-2 sm:px-3 border rounded-full text-[9px] sm:text-[11px] hover:bg-white hover:bg-opacity-25 cursor-pointer transition-all"
                       key={index}
                     >
                       {label}
@@ -95,13 +95,13 @@ export default function Page2() {
               <div className="">
                 <GoArrowRight
                   className="rounded-full p-3 bg-white bg-opacity-25 hover:bg-opacity-35 transition-all cursor-pointer"
-                  size={50}
+                  size={40}
                 />
               </div>
             </div>
             <div className="flex justify-between">
-              <span className="text-[16px]">{info.description}</span>
-              <img src={img1} alt={info.img} className="w-40"></img>
+              <span className="text-[14px] sm:text-[16px]">{info.description}</span>
+              <img src={img1} alt={info.img} className="w-20 sm:w-40"></img>
             </div>
           </div>
         ))}

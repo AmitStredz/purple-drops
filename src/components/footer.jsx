@@ -7,12 +7,12 @@ import { SlSocialInstagram } from "react-icons/sl";
 
 export default function Footer() {
   return (
-    <div className="flex flex-col gap-7 px-10 bg-gradient-to-b from-transparent to-[#420064]">
-      <div className="flex justify-between p-5">
+    <div className="flex flex-col gap-7 sm:px-10 bg-gradient-to-b from-transparent to-[#420064]">
+      <div className="flex flex-col sm:flex-row gap-5 justify-between p-3 sm:p-5">
         <div className="flex flex-col justify-between">
-          <span className="text-[18px]">Contacts</span>
+          <span className="text-[14px] sm:text-[18px]">Contacts</span>
           <div className="group transition-all cursor-default">
-            <span className="text-[60px] font-bold group-hover:hidden transition-all\">Get in Touch</span>
+            <span className="text-[40px] sm:text-[50px] md:text-[60px] font-bold group-hover:hidden transition-all\">Get in Touch</span>
             <span className="text-[60px] font-bold text-blue-700 hidden  group-hover:flex transition-all\">
               Let's Talk
             </span>
@@ -20,8 +20,8 @@ export default function Footer() {
         </div>
         <div className="flex flex-col justify-end">
           <div className="flex flex-col gap-3">
-            <span>FOLLOW ON SOCIAL</span>
-            <div className="flex gap-10">
+            <span className="text-[14px] sm:text-[18px]">FOLLOW ON SOCIAL</span>
+            <div className="flex flex-wrap gap-3 sm:gap-10">
               <SlSocialInstagram
                 size={50}
                 color="black"
@@ -54,7 +54,7 @@ export default function Footer() {
       </div>
 
       {/*  */}
-      <div className="flex gap-20 text-[16px] p-5">
+      <div className="flex flex-wrap max-sm:justify-between gap-3 sm:gap-20 text-[12px] sm:text-[16px] p-3 sm:p-5">
         <div className="flex flex-col gap-2">
           <span>+91 8137079064</span>
         </div>
@@ -69,9 +69,9 @@ export default function Footer() {
           <span>Kerala, India - 9800-009</span>
         </div>
       </div>
-      <div className="flex justify-between">
+      <div className="flex flex-col sm:flex-row gap-5 p-3 justify-between">
         <span>© 2024 purbledropsai. All rights reserved</span>
-        <div className="flex gap-10">
+        <div className="flex flex-col sm:flex-row sm:gap-10">
           <span>Privacy Policy</span>
           <span>Terms and Conditions</span>
           <span>Cookies</span>

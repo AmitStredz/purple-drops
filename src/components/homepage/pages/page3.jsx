@@ -38,22 +38,22 @@ export default function Page3() {
     },
   ];
   return (
-    <div className="flex flex-col p-5 px-10 w-full h-full">
-      <div className="flex flex-col gap-10 justify-center w-full h-screen">
+    <div className="flex flex-col p-3 sm:p-5 sm:px-10 w-full h-full">
+      <div className="flex flex-col gap-10 justify-center w-full py-24">
         <div className="w-full">
-          <span className="font-bold text-[24px]">OUR CLIENTS SAY</span>
+          <span className="font-bold text-[18px] sm:text-[24px]">OUR CLIENTS SAY</span>
         </div>
-        <div className="flex gap-20">
+        <div className="flex flex-wrap gap-10 sm:gap-20">
           {clients.map((client, index) => (
             <div className="flex flex-col gap-2" key={index}>
               <div className="">
                 <img
                   src={avatar}
-                  className="w-16 bg-white rounded-full border-2 border-blue-500"
+                  className="w-10 sm:w-16 bg-white rounded-full border-2 border-blue-500"
                 ></img>
               </div>
-              <span className="text-[18px] font-semibold">{client.name}</span>
-              <span className="text-[13px] -mt-1 text-slate-200">
+              <span className="text-[14px] sm:text-[18px] sm:font-semibold">{client.name}</span>
+              <span className="text-[10px] sm:text-[13px] -mt-1 text-slate-200">
                 {client.position}
               </span>
             </div>
@@ -61,7 +61,7 @@ export default function Page3() {
         </div>
 
         {/* Review */}
-        <div className="flex gap-10">
+        <div className="flex flex-col sm:flex-row gap-10">
           {reviews.map((review, index) => (
             <div className="flex flex-col gap-3" key={index}>
               <div className="flex gap-3 ">
@@ -69,22 +69,22 @@ export default function Page3() {
                 <span>|</span>
                 <span>{review.rating}</span>
               </div>
-              <span className="text-[28px]">{review.description}</span>
+              <span className="text-[16px] sm:text-[28px]">{review.description}</span>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="flex items-center justify-center w-full">
+      <div className="flex items-center justify-center w-full max-sm:pb-20">
         {/* <span className="text-[122px] text-center font-bold">
           We're looking for new challenge
         </span> */}
-        <img src={textImg} className="p-10"></img>
+        <img src={textImg} className="p-5 sm:p-10"></img>
       </div>
-      <div className="flex p-6 -mx-10 px-14 bg-gradient-to-b from-[#563B63] to-[#6D3C86] overflow-hidden">
+      <div className="flex sm:p-6 -mx-10 px-8 sm:px-14 bg-gradient-to-b from-[#563B63] to-[#6D3C86] overflow-hidden">
         <Marquee speed={120} gradient={false} >
-          <span className="text-[60px] font- ">LET'S WORK TOGETHER • &nbsp;</span>
-          <span className="text-[60px] font- ">LET'S WORK TOGETHER • &nbsp;</span>
+          <span className="text-[40px] sm:text-[60px] font- ">LET'S WORK TOGETHER • &nbsp;</span>
+          <span className="text-[40px] sm:text-[60px] font- ">LET'S WORK TOGETHER • &nbsp;</span>
         </Marquee>
       </div>
     </div>

@@ -9,7 +9,7 @@ import Footer from "../footer";
 export default function Homepage() {
   return (
     <div className="w-full z-0 h-full bg-[#190024] text-white font-zona font-light overflow-hidden">
-      <div className="w-full h-full z-50">
+      <div className="w-full h-full">
         <Navbar />
         <HeroSection />
         {/* <Page1 /> */}

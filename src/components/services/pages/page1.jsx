@@ -81,16 +81,16 @@ export default function Page1() {
     },
   ];
   return (
-    <div className=" relative h-full w-full ">
-      <div className="flex flex-col justify-center p-10 py-40 z-50">
-        <span className="text-[20px] font-bold z-50">SERVICES</span>
-        <span className="text-[50px] font-bold z-50">
+    <div className=" relative h-full w-full p-3">
+      <div className="flex flex-col justify-center sm:p-10 py-20 sm:py-40 z-50">
+        <span className="text-[14px] sm:text-[20px] z-50">SERVICES</span>
+        <span className="text-[20px] sm:text-[50px] font-bold z-50">
           We enhance business performance globally by providing unique and
           inventive technology solutions as a mix of skills and imagination for
           growth and better working conditions.
         </span>
       </div>
-      <div className="flex flex-col text-[62px] px-10 italic z-50">
+      <div className="flex sm:flex-col max-sm:gap-3 text-[32px] sm:text-[62px] sm:px-10 italic z-50">
         <span className=" z-50">OUR</span>
         <span className=" z-50">SOLUTIONS</span>
       </div>
@@ -98,16 +98,16 @@ export default function Page1() {
         {solutions.map((item, index) => (
           <div>
             <div className="h-[1px] w-full my-10 bg-slate-400 z-50"></div>
-            <div className="flex justify-between p-10  z-50">
-              <div className="w-2/5">
+            <div className="flex flex-col sm:flex-row justify-between sm:p-10  z-50">
+              <div className="sm:w-2/5">
                 <span className="text-[20px] font-bold z-50">{item.title}</span>
               </div>
-              <div className="flex flex-col gap-5 w-3/5">
-                <span className="text-[25px] z-50">{item.description}</span>
+              <div className="flex flex-col gap-5 sm:w-3/5">
+                <span className="text-[16px] sm:text-[25px] z-50">{item.description}</span>
                 <div className="w-full flex flex-wrap gap-3 z-50">
                   {item.labels.map((label, index) => (
                     <span
-                      className="p-2 px-3 border rounded-full text-[14px] hover:bg-white hover:bg-opacity-25 cursor-pointer transition-all z-50"
+                      className="p-1 sm:p-2 px-2 sm:px-3 border rounded-full text-[10px] sm:text-[14px] hover:bg-white hover:bg-opacity-25 cursor-pointer transition-all z-50"
                       key={index}
                     >
                       {label}
@@ -119,23 +119,13 @@ export default function Page1() {
           </div>
         ))}
       </div>
-      <div className="flex items-center justify-center w-full p-20">
-        {/* <span className="text-[122px] text-center font-bold">
-          We're looking for new challenge
-        </span> */}
-        <img src={textImg} className="p-10"></img>
+      <div className="flex items-center justify-center w-full max-sm:py-10">
+        <img src={textImg} className="p-5 sm:p-14"></img>
       </div>
-      {/* <div style={{ height: "500px" }} className="flex">
-        <Marquee speed={120} gradient={false}>
-          <span className="text-4xl font-bold px-10">
-            LET'S WORK TOGETHER . LET'S WORK TOGETHER{" "}
-          </span>
-        </Marquee>
-      </div> */}
-
-      <div className="flex p-6 px-14 bg-gradient-to-b from-[#563B63] to-[#6D3C86] overflow-hidden">
-        <Marquee speed={120} gradient={false}>
-          <span className="text-[60px] font- px-10">LET'S WORK TOGETHER .</span>
+      <div className="flex sm:p-6 -mx-10 px-8 sm:px-14 bg-gradient-to-b from-[#563B63] to-[#6D3C86] overflow-hidden">
+        <Marquee speed={120} gradient={false} >
+          <span className="text-[40px] sm:text-[60px] font- ">LET'S WORK TOGETHER • &nbsp;</span>
+          <span className="text-[40px] sm:text-[60px] font- ">LET'S WORK TOGETHER • &nbsp;</span>
         </Marquee>
       </div>
       <img
