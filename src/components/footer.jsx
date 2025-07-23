@@ -70,7 +70,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex flex-col sm:flex-row gap-5 p-3 justify-between">
-        <span>© 2024 purbledropsai. All rights reserved</span>
+        <span>© 2025 PurpleDrops AI Pvt Ltd. All rights reserved</span>
         <div className="flex flex-col sm:flex-row sm:gap-10">
           <span>Privacy Policy</span>
           <span>Terms and Conditions</span>
